@@ -1,6 +1,7 @@
 const express = require('express');
 const fs = require('fs'); // File system for TA01
 const router = express.Router();
+
 // Remember Team Activity 01?
 // This is the same solution, but implemented in our app using
 // proper routing for the view engine
@@ -39,6 +40,7 @@ router.get('/activities', (req, res, next) => {
   for (const activity of activities) {
     res.write(`<li>${activity}</li>`);
   }
+
   res.write('</ul>');
   // Form for "./add-activity".
   res.write('<form action="./add-activity" method="POST">');
